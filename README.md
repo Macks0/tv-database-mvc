@@ -1,5 +1,5 @@
 # TV Show Database (MVC Project)
-I used SQL Server for the database and Entity Framework Core for the data stuff. Bootstrap is used for styling (kinda default Bootstrap tho lol).
+I used SQL Server for the database and Entity Framework Core for the data stuff. Bootstrap is used for styling (kinda default Bootstrap tho).
 
 ## Features
 
