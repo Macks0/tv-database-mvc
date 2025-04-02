@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model TV_Show_Database.Models.Entities.Show
+
+<h1>Edit Show</h1>
+
+@if (Model is null)
+{
+    <p>No show found with this Title</p>
+
+}
+
+else{
+<form method="post">
+        <div class="mt-3">
+            <label class="form-label">Id</label>
+            <input type="text" class="form-control" asp-for="Id" readonly />
+        </div>
+    <div class="mt-3">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-control" asp-for="Title" />
+    </div>
+
+    <div class="mt-3">
+        <label class="form-label">Genre</label>
+        <input type="text" class="form-control" asp-for="Genre" />
+    </div>
+
+    <div class="mt-3">
+        <label class="form-label">Release Year</label>
+        <input type="number" class="form-control" min="1900" max="2100" asp-for="ReleaseYear" />
+    </div>
+
+    <div class="mt-3">
+        <label class="form-label">Rating</label>
+        <input type="number" class="form-control" min="1.0" max="10.0" step="0.1" asp-for="Rating" />
+    </div>
+
+    <div class="mt-3">
+        <input type="checkbox" class="form-check-input" id="Recommended" asp-for="Recommend" />
+        <label class="form-check-label" for="Recommend">Recommended</label>
+    </div>
+
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <button type="submit" class="btn btn-danger ms-3" 
+            asp-action="Delete"
+            asp-controller="Shows">Delete</button>
+    </div>
+</form>
+}
