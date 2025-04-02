@@ -17,5 +17,6 @@ I used SQL Server for the database and Entity Framework Core for the data stuff.
 4. Run the app
 
 ```bash
+dotnet tool install --global dotnet-ef
 dotnet ef database update
 dotnet run
